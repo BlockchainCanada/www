@@ -1,13 +1,13 @@
 
 TITLE: 
-Concept - 100% Fully Responsive Free HTML5 Bootstrap Template
+Booster - Responsive Free HTML5 template
 
 AUTHOR:
-DESIGNED & DEVELOPED by GetTemplates.co
+DESIGNED & DEVELOPED by FREEHTML5.co
+http://freehtml5.co/
 
-Website: http://gettemplates.co/
-Twitter: http://twitter.com/gettemplatesco
-Facebook: http://facebook.com/gettemplatesco
+Twitter: http://twitter.com/fh5co
+Facebook: http://facebook.com/fh5co
 
 
 CREDITS:
@@ -27,8 +27,9 @@ http://modernizr.com/
 Google Fonts
 https://www.google.com/fonts/
 
-Icomoon
+Icomoon Entypo
 https://icomoon.io/app/
+http://www.entypo.com/
 
 Respond JS
 https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
@@ -39,16 +40,11 @@ http://daneden.me/animate
 jQuery Waypoint
 https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
-Stellar Parallax
-http://markdalgleish.com/projects/stellar.js/
-
-jQuery countTo
-http://www.owlcarousel.owlgraphic.com/
-
 Magnific Popup
 http://dimsemenov.com/plugins/magnific-popup/
 
-Demo Images:
-http://pixeden.com
-http://unsplash.com
+Owl Carousel 2
+http://www.owlcarousel.owlgraphic.com/
+
+
 
