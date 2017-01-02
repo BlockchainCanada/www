@@ -8,7 +8,7 @@ $grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #FBB040 !default;
+$brand-primary: salmon !default;
 $brand-white: #fff;
 $brand-black: #000;
 $brand-darker: #444;
@@ -586,7 +586,7 @@ pre {
 			}
 		i {
 			font-size: 100px;
-			color: #FBB040;
+			color: salmon;
 			@media screen and (max-width: $screen-sm) {
 				font-size: 50px;
 				margin-top: 10px;
