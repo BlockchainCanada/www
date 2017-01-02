@@ -1165,7 +1165,8 @@ p {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
 @media (min-width: 768px) {
   .lead {
     font-size: 21px; } }
@@ -6036,16 +6037,31 @@ a > img.fh5co-align-center {
   display: block;
   padding: 14px 21px;
   border-radius: 2px 2px 0 0;
-  font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
-  background: $tabs-base-color;
   cursor: pointer;
   position: relative;
   top: 4px;
-  @include transition(all 0.2s ease-in-out);
-  &:hover {
-    background: darken($tabs-base-color, 10);
+}
+@media (min-width: 320px)
+{
+  .tabs-bc label
+  {
+      font-size: x-small;
+  }
+}
+@media (min-width: 768px)
+{
+  .tabs-bc label
+  {
+      font-size: small;
+  }
+}
+@media (min-width: 992px)
+{
+  .tabs-bc label
+  {
+      font-size: medium;
   }
 }
 
