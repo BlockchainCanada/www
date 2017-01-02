@@ -1,15 +1,15 @@
 ;(function () {
-	
+
 	'use strict';
 
-	// iPad and iPod detection	
+	// iPad and iPod detection
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
 
 	var isiPhone = function(){
 	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
+			(navigator.platform.indexOf("iPhone") != -1) ||
 			(navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
@@ -18,16 +18,16 @@
 	var burgerMenu = function() {
 		$('body').on('click', '.js-fh5co-nav-toggle', function(){
 			if ( $('#fh5co-navbar').is(':visible') ) {
-				$(this).removeClass('active');	
+				$(this).removeClass('active');
 			} else {
-				$(this).addClass('active');	
+				$(this).addClass('active');
 			}
-			
+
 		});
 	};
 
 	var owlCrouselFeatureSlide = function() {
-		
+
 		var owl = $('.owl-carousel');
 
 		owl.on('initialized.owl.carousel change.owl.carousel',function(elem){
@@ -43,27 +43,23 @@
 
 		owl.owlCarousel({
 			items: 1,
-		    loop: true,
+		    loop: false,
 		    margin: 0,
 		    responsiveClass: true,
-		    nav: true,
-		    dots: true,
+		    nav: false,
+		    dots: false,
 		    smartSpeed: 500,
 		    autoplay: true,
 			autoplayTimeout: 5000,
 			autoplayHoverPause: true,
-		    navText: [	
+		    navText: [
 		      "<i class='icon-arrow-left2 owl-direction'></i>",
 		      "<i class='icon-arrow-right2 owl-direction'></i>"
 	     	],
-
 		});
-		
 	};
 
-
 	// Magnific Popup
-	// MagnificPopup
 	var magnifPopup = function() {
 		$('.image-popup').magnificPopup({
 			type: 'image',
@@ -93,83 +89,106 @@
 
 	// Animate Feature
 	var animateFeatureIcons = function() {
-		if ( $('#fh5co-features').length > 0 ) {	
+		if ( $('#fh5co-features').length > 0 ) {
 			$('#fh5co-features .to-animate').each(function( k ) {
-				
+
 				var el = $(this);
-				
+
 				setTimeout ( function () {
 					el.addClass('bounceIn animated');
 				},  k * 200, 'easeInOutExpo' );
-				
+
 			});
 		}
 	};
 
 	// Animate Products
 	var animateProducts = function() {
-		if ( $('#fh5co-products').length > 0 ) {	
+		if ( $('#fh5co-products').length > 0 ) {
 			$('#fh5co-products .to-animate').each(function( k ) {
-				
+
 				var el = $(this);
-				
+
 				setTimeout ( function () {
 					el.addClass('bounceIn animated');
 				},  k * 200, 'easeInOutExpo' );
-				
+
+			});
+		}
+	};
+
+	// Animate Team
+	var animateTeam = function() {
+		if ( $('#fh5co-team').length > 0 ) {
+			$('#fh5co-team .to-animate').each(function( k ) {
+
+				var el = $(this);
+
+				setTimeout ( function () {
+					el.addClass('bounceIn animated');
+				},  k * 200, 'easeInOutExpo' );
+
 			});
 		}
 	};
 
 	// Animate Clients Logo
 	var animateClientLogo = function() {
-		if ( $('#fh5co-clients').length > 0 ) {	
+		if ( $('#fh5co-clients').length > 0 ) {
 			$('#fh5co-clients .to-animate').each(function( k ) {
-				
+
 				var el = $(this);
-				
+
 				setTimeout ( function () {
 					el.addClass('bounceIn animated');
 				},  k * 200, 'easeInOutExpo' );
-				
+
 			});
 		}
 	};
 
 
-	// Waypoints 
+	// Waypoints
 	var featureIconsWayPoint = function() {
 		if ( $('#fh5co-features').length > 0 ) {
 			$('#fh5co-features').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this).hasClass('animated') ) {
-					
-					
-					
 
 					setTimeout(animateFeatureIcons, 200);
-					
-					
+
 					$(this).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 		}
 	};
+
 	var productsWayPoint = function() {
 		if ( $('#fh5co-products').length > 0 ) {
 			$('#fh5co-products').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this).hasClass('animated') ) {
-					
-					
-					
 
 					setTimeout(animateProducts, 200);
-					
-					
+
 					$(this).addClass('animated');
-						
+
+				}
+			} , { offset: '80%' } );
+		}
+	};
+
+	var teamWayPoint = function() {
+		if ( $('#fh5co-team').length > 0 ) {
+			$('#fh5co-team').waypoint( function( direction ) {
+
+				if( direction === 'down' && !$(this).hasClass('animated') ) {
+
+					setTimeout(animateTeam, 200);
+
+					$(this).addClass('animated');
+
 				}
 			} , { offset: '80%' } );
 		}
@@ -178,37 +197,32 @@
 	var clientsWayPoint = function() {
 		if ( $('#fh5co-products').length > 0 ) {
 			$('#fh5co-products').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this).hasClass('animated') ) {
-					
-					
-					
 
 					setTimeout(animateClientLogo, 200);
-					
-					
+
 					$(this).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 		}
 	};
 
-	
 
-	
+
+
 	$(function(){
-		
+
 		burgerMenu();
 		owlCrouselFeatureSlide();
 		magnifPopup();
 
 		featureIconsWayPoint();
 		productsWayPoint();
+		teamWayPoint();
 		clientsWayPoint();
-		
 
 	});
-
 
 }());

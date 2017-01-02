@@ -1052,10 +1052,25 @@ figure {
 img {
   vertical-align: middle; }
 
+.img-engage{
+    width:50%;
+}
+
+.img-team{
+    width:75%;
+}
+
 .img-responsive {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.img-responsive-learning {
+display: block;
+max-width: 100%;
+height: auto;
+width: 20%;
+}
 
 .img-rounded {
   border-radius: 6px; }
@@ -2151,6 +2166,11 @@ table td[class*="col-"], table th[class*="col-"] {
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%; }
+
+#example_filter{
+    padding: 0 0 2.5% 0;
+}
+
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
@@ -3378,16 +3398,22 @@ tbody.collapse.in {
   margin-bottom: 0;
   border-width: 1px 0 0; }
 
-.navbar-brand {
+.navbar-brand
+{
   float: left;
   padding: 20px 20px;
   font-size: 18px;
   line-height: 20px;
-  height: 60px; }
+  /*height: 60px;*/
+  height: auto;
+}
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none; }
-.navbar-brand > img {
-  display: block; }
+.navbar-brand > img
+{
+  display: block;
+  width: 40%;
+}
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: -20px; } }
@@ -5330,11 +5356,13 @@ h1, h2, h3, h4, h5, h6 {
     height: inherit;
     padding: 3em 0; } }
 
-#fh5co-hero .fh5co-hero-wrap, .fh5co-bg-section .fh5co-hero-wrap {
+#fh5co-hero .fh5co-hero-wrap, .fh5co-bg-section .fh5co-hero-wrap
+{
   display: table;
   width: 100%;
   z-index: 12;
-  position: relative; }
+  position: relative;
+}
 #fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro, .fh5co-bg-section .fh5co-hero-wrap .fh5co-hero-intro {
   display: table-cell;
   vertical-align: middle; }
@@ -5346,8 +5374,12 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro .fh5co-lead, .fh5co-bg-section .fh5co-hero-wrap .fh5co-hero-intro .fh5co-lead {
   margin-bottom: 30px; }
 
-.fh5co-bg-section, .fh5co-hero-wrap {
-  height: 400px; }
+.fh5co-bg-section, .fh5co-hero-wrap
+{
+  /*height: 400px;*/
+  height: 100%;
+  padding: 1% 0;
+}
 @media screen and (max-width: 768px) {
   .fh5co-bg-section, .fh5co-hero-wrap {
     height: inherit;
@@ -5401,8 +5433,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 5%;
   margin-top: 5px; }
 .fh5co-post a .fh5co-post-blurb {
-  float: right;
-  width: 75%;
   color: #000;
   line-height: 1.5; }
 .fh5co-post a .fh5co-post-meta {
@@ -5863,14 +5893,16 @@ pre {
   background: white;
   border: 2px solid transparent; }
 
-.owl-carousel-fullwidth .item, .owl-carousel-fullwidth .fh5co-owl-text-wrap {
+.owl-carousel-fullwidth .item, .owl-carousel-fullwidth .fh5co-owl-text-wrap
+{
   height: 800px;
   display: table;
-  width: 100%; }
+  width: 100%;
+}
 .owl-carousel-fullwidth .item {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left;
+  background-position: center;
   position: relative; }
 .owl-carousel-fullwidth .item .fh5co-overlay {
   position: absolute;
@@ -5973,3 +6005,79 @@ a > img.fh5co-align-center {
   margin-right: auto; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Tabs - from Codepen */
+
+.tabs-bc {
+    padding: 0 2%;
+    /*width: 650px;*/
+    /*height: 1000px;*/
+    float: none;
+    list-style: none;
+    position: relative;
+    text-align: left;
+}
+
+.tabs-bc li
+{
+  float: left !important;
+  display: block !important;
+}
+
+.tabs-bc input[type="radio"]
+{
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  display: block;
+}
+
+.tabs-bc label {
+  display: block;
+  padding: 14px 21px;
+  border-radius: 2px 2px 0 0;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: $tabs-base-color;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+    background: darken($tabs-base-color, 10);
+  }
+}
+
+.tabs-bc .tab-content{
+  z-index: 2;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 25px;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  background: darken($tabs-base-color, 15);
+}
+
+.tabs-bc [id^="tab"]:checked + label {
+  top: 0;
+  padding-top: 17px;
+  color: white;
+  background: #FBB040;
+}
+
+.tabs-bc [id^="tab"]:checked ~ [id^="tab-content"] {
+  display: block;
+}
+
+.tabs-sub{
+    padding: 0;
+}
+
+.tabs-sub li{
+    float: none !important;
+}
